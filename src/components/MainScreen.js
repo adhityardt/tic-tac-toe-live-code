@@ -11,6 +11,9 @@ import MobXStore from '../stores/MobXStore';
      };
   }
   render() {
+    if(MobXStore.state.counter === 7){
+      this.props.navigation.navigate('Third')
+    }
     return (
       <View style={styles.container}>
         <View style={styles.row1}>

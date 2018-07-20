@@ -3,7 +3,8 @@ import {observable, action} from 'mobx'
 class MobXStore {
   @observable state = {
     board: ['', '', '', '', '', '', '', '', ''],
-    counter: 1
+    counter: 1,
+    message: 'Game Over'
   }
   
   @action
