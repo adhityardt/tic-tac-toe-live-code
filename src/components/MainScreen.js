@@ -11,10 +11,11 @@ import MobXStore from '../stores/MobXStore';
      };
   }
   render() {
+    console.log(MobXStore.state.player)
     return (
       <View style={styles.container}>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box} /* onPress={()=> this.setState({board: ''})}*/>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.player = 'yes'}>
             <Text>{MobXStore.state.player}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.box}>
