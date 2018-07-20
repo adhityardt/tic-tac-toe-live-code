@@ -9,7 +9,19 @@ class MainScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box1}/>
+          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}/>
+        </View>
+        <View style={styles.row1}>
+          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}/>
+        </View>
+        <View style={styles.row1}>
+          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}/>
         </View>
       </View>
     );
@@ -18,15 +30,19 @@ class MainScreen extends Component {
 
 const styles = {
   container : {
-
+    flex: 1,
+    flexDirection: 'column',
   },
   row1 : {
-    
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
-  box1: {
+  box: {
     borderWidth: 1,
-    height: 50,
-    width: 50
+    height: 80,
+    width: 80
   }
 }
 export default MainScreen;
