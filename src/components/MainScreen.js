@@ -7,43 +7,42 @@ import MobXStore from '../stores/MobXStore';
   constructor(props) {
     super(props);
     this.state = { 
-      board: ['', '', '', '', '', '', '', '', '']
+
      };
   }
   render() {
-    
     return (
       <View style={styles.container}>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[0] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(0)}>
             <Text>{MobXStore.state.board[0]}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[1] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(1)}>
           <Text>{MobXStore.state.board[1]}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[2] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(2)}>
           <Text>{MobXStore.state.board[2]}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[3] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(3)}>
           <Text>{MobXStore.state.board[3]}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[4] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(4)}>
           <Text>{MobXStore.state.board[4]}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[5] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(5)}>
           <Text>{MobXStore.state.board[5]}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[6] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(6)}>
           <Text>{MobXStore.state.board[6]}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[7] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(7)}>
           <Text>{MobXStore.state.board[7]}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.state.board[8] = 'yes'}>
+          <TouchableOpacity style={styles.box} onPress={()=> MobXStore.setBoard(8)}>
           <Text>{MobXStore.state.board[8]}</Text>
           </TouchableOpacity>
         </View>
