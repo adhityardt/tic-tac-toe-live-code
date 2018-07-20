@@ -3,13 +3,17 @@ import {observable, action} from 'mobx'
 class MobXStore {
   @observable state = {
     board: ['', '', '', '', '', '', '', '', ''],
-    counter: 1,
-    player: 'X'
+    counter: 1
   }
   
   @action
   setBoard (payload) {
-    this.state.board[payload] = this.state.player
+    if (this.state.counter%2 !== 0) {
+      this.state.board[payload] = 'X'
+    } else {
+      this.state.board[payload] = 'O'
+    }
+    this.state.counter++
   }
 }
 
