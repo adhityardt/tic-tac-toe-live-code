@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text} from 'react-native'
+import {Button} from 'react-native'
 class WelcomeScreen extends Component {
   constructor(props) {
     super(props);
@@ -7,8 +7,14 @@ class WelcomeScreen extends Component {
   }
   render() {
     return (
-      <Text> ini welcome screen</Text>
+      <Button title="Start" onPress={() =>this.props.navigation.navigate('Second')} />
     );
+  }
+}
+
+const styles = {
+  button: {
+
   }
 }
 
