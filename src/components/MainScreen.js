@@ -12,8 +12,10 @@ import MobXStore from '../stores/MobXStore';
   }
   render() {
     if(MobXStore.state.counter === 7){
-      this.props.navigation.navigate('Third')
+      let self = this
+      setTimeout(function(){ self.props.navigation.navigate('Third') }, 1000);
     }
+    // if(MobXStore.state.board === )
     return (
       <View style={styles.container}>
         <View style={styles.row1}>

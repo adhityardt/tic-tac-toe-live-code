@@ -10,8 +10,15 @@ import MobXStore from '../stores/MobXStore';
   }
   render() {
     return (
-      <Text>{MobXStore.state.message}</Text>
+      <Text style={styles.message}>{MobXStore.state.message}</Text>
     );
+  }
+}
+
+const styles = {
+  message: {
+    fontSize: 100,
+    alignItem: 'center'
   }
 }
 
