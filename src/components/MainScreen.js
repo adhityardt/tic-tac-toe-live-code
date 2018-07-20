@@ -3,25 +3,46 @@ import {Text, View, TouchableOpacity} from 'react-native'
 class MainScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = {  };
+    this.state = { 
+      board: ['', '', '', '', '', ''],
+      player: 'X'
+     };
   }
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box}/>
-          <TouchableOpacity style={styles.box}/>
-          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}>
+            <Text>{this.state.player}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box}/>
-          <TouchableOpacity style={styles.box}/>
-          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box}/>
-          <TouchableOpacity style={styles.box}/>
-          <TouchableOpacity style={styles.box}/>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.player}</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
