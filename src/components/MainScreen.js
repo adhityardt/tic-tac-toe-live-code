@@ -1,47 +1,49 @@
 import React, { Component } from 'react';
 import {Text, View, TouchableOpacity} from 'react-native'
-class MainScreen extends Component {
+import {observer} from 'mobx-react'
+import MobXStore from '../stores/MobXStore';
+
+@observer class MainScreen extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      board: ['', '', '', '', '', ''],
-      player: 'X'
+      board: ['', '', '', '', '', '', '', '', '']
      };
   }
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.row1}>
-          <TouchableOpacity style={styles.box}>
-            <Text>{this.state.player}</Text>
+          <TouchableOpacity style={styles.box} /* onPress={()=> this.setState({board: ''})}*/>
+            <Text>{MobXStore.state.player}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
+          <Text>{this.state.board[1]}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.row1}>
-          <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
+          <Text>{this.state.board[2]}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.row1}>
           <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
+          <Text>{this.state.board[3]}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
+          <Text>{this.state.board[4]}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.box}>
-          <Text>{this.state.player}</Text>
+          <Text>{this.state.board[5]}</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.row1}>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.board[6]}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.board[7]}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.box}>
+          <Text>{this.state.board[8]}</Text>
           </TouchableOpacity>
         </View>
       </View>
